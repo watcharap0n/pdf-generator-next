@@ -96,8 +96,8 @@ export default function DesignerClient({
         if (!designerInstance.current) return;
         setStatus("Generating PDF...");
         try {
-            // Saving first for better UX
-            await handleSave();
+            // Saving first for better UX (best effort, don't block if fails)
+            handleSave().catch(e => console.warn("Auto-save failed:", e));
 
             let parsedInput = {};
             try {
@@ -108,12 +108,17 @@ export default function DesignerClient({
                 return;
             }
 
+            const template = designerInstance.current.getTemplate();
+
             const res = await fetch("/api/pdf/generate", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ inputs: [parsedInput] })
+                body: JSON.stringify({
+                    template,
+                    inputs: [parsedInput]
+                })
             });
 
             if (!res.ok) throw new Error("Failed to generate");

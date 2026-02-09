@@ -7,46 +7,43 @@ import { getFonts } from '@/lib/pdfme_fonts';
 
 export async function POST(req: NextRequest) {
     try {
-        const templatePath = path.join(process.cwd(), 'templates', 'template.latest.json');
-        const dataPath = path.join(process.cwd(), 'data', 'sample.input.json');
-
-        if (!fs.existsSync(templatePath)) {
-            return NextResponse.json({ error: 'Template not found. Please save a template first.' }, { status: 404 });
-        }
-
-        // Check for dynamic inputs from request body
+        // Check for template and inputs from request body
         let inputs;
+        let template;
+
         try {
             const body = await req.json();
-            if (body && body.inputs) {
-                inputs = body.inputs;
-            }
+            if (body && body.inputs) inputs = body.inputs;
+            if (body && body.template) template = body.template;
         } catch (e) {
-            // No body or invalid JSON, fall back to file
+            // No body or invalid JSON
+        }
+
+        if (!template) {
+            const templatePath = path.join(process.cwd(), 'templates', 'template.latest.json');
+            if (fs.existsSync(templatePath)) {
+                template = JSON.parse(fs.readFileSync(templatePath, 'utf-8'));
+            } else {
+                return NextResponse.json({ error: 'Template not found and not provided in request.' }, { status: 404 });
+            }
         }
 
         if (!inputs) {
+            const dataPath = path.join(process.cwd(), 'data', 'sample.input.json');
             if (!fs.existsSync(dataPath)) {
                 return NextResponse.json({ error: 'Sample data not found and no input provided.' }, { status: 404 });
             }
             inputs = [JSON.parse(fs.readFileSync(dataPath, 'utf-8'))];
         }
 
-        const template = JSON.parse(fs.readFileSync(templatePath, 'utf-8'));
         const font = await getFonts();
-
         const plugins = { text, image };
 
         // @ts-ignore
         const pdf = await generate({ template, inputs, plugins, options: { font } });
 
-
-        const outPath = path.join(process.cwd(), 'out', 'generated.pdf');
-        fs.writeFileSync(outPath, pdf);
-
-        const fileBuffer = fs.readFileSync(outPath);
-
-        return new NextResponse(fileBuffer, {
+        // Return PDF buffer directly without saving to disk (stateless for Vercel)
+        return new NextResponse(pdf, {
             status: 200,
             headers: {
                 'Content-Type': 'application/pdf',

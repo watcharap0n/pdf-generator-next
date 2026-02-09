@@ -16,7 +16,8 @@ export async function POST(req: NextRequest) {
 
         return NextResponse.json({ ok: true, path: 'templates/template.latest.json' });
     } catch (error) {
-        console.error('Error saving template:', error);
-        return NextResponse.json({ error: 'Failed to save template' }, { status: 500 });
+        console.error('Error saving template (likely read-only filesystem):', error);
+        // On Vercel, this will fail. We return 500, but client now handles this gracefully.
+        return NextResponse.json({ error: 'Failed to save template to disk' }, { status: 500 });
     }
 }
