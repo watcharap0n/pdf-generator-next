@@ -1,0 +1,63 @@
+{
+  "schemas": [
+    [
+      {
+        "type": "text",
+        "position": {
+          "x": 52.6,
+          "y": 79.59
+        },
+        "width": 100,
+        "height": 10,
+        "content": "สวัสดี",
+        "name": "doc_title"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 59.48,
+          "y": 95.64
+        },
+        "width": 100,
+        "height": 10,
+        "content": "Comp Name",
+        "name": "company_name_th"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 55.51,
+          "y": 112.76
+        },
+        "width": 100,
+        "height": 10,
+        "content": "Cust Name",
+        "name": "customer_name_th"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 86.73,
+          "y": 125.64
+        },
+        "width": 50,
+        "height": 10,
+        "content": "0.00",
+        "name": "total_amount"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 40.43,
+          "y": 143.02
+        },
+        "width": 150,
+        "height": 20,
+        "content": "Note",
+        "name": "note_th"
+      }
+    ]
+  ],
+  "basePdf": "data:application/pdf;base64,JVBERi0xLjcKJYGBgYEKCjYgMCBvYmoKPDwKL0ZpbHRlciAvRmxhdGVEZWNvZGUKL0xlbmd0aCA3Ngo+PgpzdHJlYW0KeJwr5HIK4TJQAMGidC59j9ScstSSzOREXXMDSwsTCwNzC0sFQ4WQNC4jE4UQHy5DsEoIGZLLZWNkYKcQksUVosXlGsIVyAUA1qIRWAplbmRzdHJlYW0KZW5kb2JqCgo3IDAgb2JqCjw8Ci9GaWx0ZXIgL0ZsYXRlRGVjb2RlCi9UeXBlIC9PYmpTdG0KL04gNQovRmlyc3QgMjYKL0xlbmd0aCAzNjgKPj4Kc3RyZWFtCnic1VLfS8MwEH7PX3GP+uCSpj/Syhhsa6sg4tgERfGha8OojETaVOZ/713bOfYgPkv5SO7uu+RL7/NAgIQgAB9UDAGEvoQQlKdgOmX88etDA18VO90yfldXLbwiR8Aa3hhf2s448Nhsxk7cZeGKvd2xoQk8Ih8Zq8ZWXakbmOZZnguhhBBRgIiEkCmuS0SCkBhjTca4R6hgBOaUL4Q/x1o+IFJDD9V7bjj2Z7giNyJOOnCDeIh/7qW7suEM+ZeeZMb4va3Swmm4SK+lkBGKTEQUJl70com/o9GFs//3cb3+2ppfX3g2ZxovDbnR5IF+ynytW9s1JY6deLnFCm1u9f5Tu7osrpRIYtSp4gQ9NhqDPz9s33XZUynMDu5m40jDkKDcva7qYmEP6D6BX5iEExlDHHgTPAmdODfGOvJm70rjUBNF0ejUM+Eki/FNt3V9SEmP8UXR6l7wSS1KMaWtarMD/lSbuWnrY4JO/AavCsdCCmVuZHN0cmVhbQplbmRvYmoKCjggMCBvYmoKPDwKL1NpemUgOQovUm9vdCAyIDAgUgovSW5mbyAzIDAgUgovRmlsdGVyIC9GbGF0ZURlY29kZQovVHlwZSAvWFJlZgovTGVuZ3RoIDQwCi9XIFsgMSAyIDIgXQovSW5kZXggWyAwIDkgXQo+PgpzdHJlYW0KeJwVxLERACAMA7G3wx0t8zIPeyZYhYBusyEpOVVa4oB4P18YYDADaQplbmRzdHJlYW0KZW5kb2JqCgpzdGFydHhyZWYKNjM0CiUlRU9G",
+  "pdfmeVersion": "5.5.8"
+}

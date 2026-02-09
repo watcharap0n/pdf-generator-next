@@ -9,7 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@pdfme/generator": "^5.5.8",
+    "@pdfme/schemas": "^5.5.8",
+    "@pdfme/ui": "^5.5.8",
     "next": "16.1.6",
+    "pdf-lib": "^1.17.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
