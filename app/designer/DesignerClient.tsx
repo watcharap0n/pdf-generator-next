@@ -6,6 +6,8 @@ import { Template } from "@pdfme/common";
 import {
     text,
     image,
+    table,
+    line,
 } from "@pdfme/schemas";
 
 interface DesignerClientProps {
@@ -35,7 +37,9 @@ export default function DesignerClient({
             // Prepare plugins
             const plugins = {
                 text,
-                image
+                image,
+                table,
+                line
             };
 
             const designer = new Designer({
@@ -96,8 +100,8 @@ export default function DesignerClient({
         if (!designerInstance.current) return;
         setStatus("Generating PDF...");
         try {
-            // Saving first for better UX (best effort, don't block if fails)
-            handleSave().catch(e => console.warn("Auto-save failed:", e));
+            // Auto-save removed for stateless/Vercel deployment to avoid 500 errors.
+            // User should use "Export Template" to save their work locally.
 
             let parsedInput = {};
             try {

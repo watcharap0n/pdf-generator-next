@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { generate } from '@pdfme/generator';
-import { text, image } from '@pdfme/schemas';
+import { text, image, table, line } from '@pdfme/schemas';
 import { getFonts } from '@/lib/pdfme_fonts';
 
 export async function POST(req: NextRequest) {
@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
         }
 
         const font = await getFonts();
-        const plugins = { text, image };
+        const plugins = { text, image, table, line };
 
         // @ts-ignore
         const pdf = await generate({ template, inputs, plugins, options: { font } });

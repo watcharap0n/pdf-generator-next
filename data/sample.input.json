@@ -3,5 +3,17 @@
   "company_name_th": "บริษัท ทดสอบ จำกัด",
   "customer_name_th": "ลูกค้า: คุณเคน",
   "total_amount": "15,000.00",
-  "note_th": "หมายเหตุ: กรุณาชำระเงินภายใน 7 วัน"
+  "note_th": "หมายเหตุ: กรุณาชำระเงินภายใน 7 วัน",
+  "table": [
+    [
+      "Alice",
+      "New York",
+      "Alice is a freelance web designer and developer"
+    ],
+    [
+      "Bob",
+      "Paris",
+      "Bob is a freelance illustrator and graphic designer"
+    ]
+  ]
 }
