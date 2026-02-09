@@ -3,49 +3,53 @@ import DesignerClient from './DesignerClient';
 import { getFontsBase64 } from '@/lib/pdfme_fonts';
 import fs from 'fs';
 import path from 'path';
-import { Template } from '@pdfme/ui';
-import { BLANK_PDF } from '@pdfme/schemas';
+import { Template, BLANK_PDF } from '@pdfme/common';
 
 const DEFAULT_TEMPLATE: Template = {
     basePdf: BLANK_PDF,
     schemas: [
-        {
-            "doc_title": {
+        [
+            {
+                "name": "doc_title",
                 "type": "text",
                 "position": { "x": 10, "y": 10 },
                 "width": 100,
                 "height": 10,
                 "content": "Quote"
             },
-            "company_name_th": {
+            {
+                "name": "company_name_th",
                 "type": "text",
                 "position": { "x": 10, "y": 25 },
                 "width": 100,
                 "height": 10,
                 "content": "Company Name"
             },
-            "customer_name_th": {
+            {
+                "name": "customer_name_th",
                 "type": "text",
                 "position": { "x": 10, "y": 40 },
                 "width": 100,
                 "height": 10,
                 "content": "Customer Name"
             },
-            "total_amount": {
+            {
+                "name": "total_amount",
                 "type": "text",
                 "position": { "x": 10, "y": 55 },
                 "width": 50,
                 "height": 10,
                 "content": "0.00"
             },
-            "note_th": {
+            {
+                "name": "note_th",
                 "type": "text",
                 "position": { "x": 10, "y": 70 },
                 "width": 150,
                 "height": 20,
                 "content": "Note"
             }
-        }
+        ]
     ]
 };
 
