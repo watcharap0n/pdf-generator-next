@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { generate } from '@pdfme/generator';
+import { text, image } from '@pdfme/schemas';
 import { getFonts } from '@/lib/pdfme_fonts';
 
 export async function POST(req: NextRequest) {
@@ -13,17 +14,31 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ error: 'Template not found. Please save a template first.' }, { status: 404 });
         }
 
-        if (!fs.existsSync(dataPath)) {
-            return NextResponse.json({ error: 'Sample data not found.' }, { status: 404 });
+        // Check for dynamic inputs from request body
+        let inputs;
+        try {
+            const body = await req.json();
+            if (body && body.inputs) {
+                inputs = body.inputs;
+            }
+        } catch (e) {
+            // No body or invalid JSON, fall back to file
+        }
+
+        if (!inputs) {
+            if (!fs.existsSync(dataPath)) {
+                return NextResponse.json({ error: 'Sample data not found and no input provided.' }, { status: 404 });
+            }
+            inputs = [JSON.parse(fs.readFileSync(dataPath, 'utf-8'))];
         }
 
         const template = JSON.parse(fs.readFileSync(templatePath, 'utf-8'));
-        const inputs = [JSON.parse(fs.readFileSync(dataPath, 'utf-8'))];
-
         const font = await getFonts();
 
+        const plugins = { text, image };
+
         // @ts-ignore
-        const pdf = await generate({ template, inputs, options: { font } });
+        const pdf = await generate({ template, inputs, plugins, options: { font } });
 
 
         const outPath = path.join(process.cwd(), 'out', 'generated.pdf');
