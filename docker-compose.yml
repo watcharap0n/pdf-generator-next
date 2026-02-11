@@ -1,0 +1,14 @@
+services:
+  pdfme:
+    build: .
+    container_name: pdfme
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+    networks:
+      - document-receipt-network
+
+networks:
+  document-receipt-network:
+    external: true
