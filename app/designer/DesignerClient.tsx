@@ -22,13 +22,97 @@ export default function DesignerClient({
     const designerRef = useRef<HTMLDivElement>(null);
     const designerInstance = useRef<Designer | null>(null);
     const [status, setStatus] = useState<string>("");
-    const [inputData, setInputData] = useState<string>(JSON.stringify({
-        "doc_title": "ใบเสนอราคา",
-        "company_name_th": "บริษัท ทดสอบ จำกัด",
-        "customer_name_th": "ลูกค้า: คุณเคน",
-        "total_amount": "15,000.00",
-        "note_th": "หมายเหตุ: กรุณาชำระเงินภายใน 7 วัน"
-    }, null, 2));
+    const [inputData, setInputData] = useState<string>(JSON.stringify(
+        {
+            "doc_title": "ใบเสนอราคาต้นฉบับ",
+            "doc_type": "QT-2026-0001",
+            "comp_name": "Goatie.ai Co., Ltd.",
+            "comp_address_1": "99/9 ถนนสุขุมวิท แขวงคลองตันเหนือ",
+            "comp_address_2": "เขตวัฒนา กรุงเทพมหานคร 10110",
+            "tel": "โทร: 02-000-0000",
+            "comp_tax_id": "0105566123456",
+            "cust_name": "บริษัท ลูกค้าทดสอบ จำกัด",
+            "table_item": [
+                [
+                    "1",
+                    "รายการที่ 1: ค่าพัฒนา Bulk Transfer (Split 1.9%)",
+                    "1",
+                    "4000.00",
+                    "4000.00"
+                ],
+                [
+                    "2",
+                    "รายการที่ 2: ค่าติดตั้ง/ตั้งค่าเริ่มต้นระบบ",
+                    "1",
+                    "1500.00",
+                    "1500.00"
+                ],
+                [
+                    "3",
+                    "รายการที่ 3: ปรับปรุงหน้า Admin (UI/UX + Validation)",
+                    "1",
+                    "1200.00",
+                    "1200.00"
+                ],
+                [
+                    "4",
+                    "รายการที่ 4: เพิ่ม API Endpoint สำหรับ Bulk Transfer",
+                    "1",
+                    "1800.00",
+                    "1800.00"
+                ],
+                [
+                    "5",
+                    "รายการที่ 5: เพิ่ม Log/Audit Trail การโอนเงิน",
+                    "1",
+                    "900.00",
+                    "900.00"
+                ],
+                [
+                    "6",
+                    "รายการที่ 6: เพิ่ม Report สรุปรายการโอน (Export ได้)",
+                    "1",
+                    "1100.00",
+                    "1100.00"
+                ],
+                [
+                    "7",
+                    "รายการที่ 7: ทดสอบระบบ (Unit/Integration) + UAT Support",
+                    "1",
+                    "1300.00",
+                    "1300.00"
+                ],
+                [
+                    "8",
+                    "รายการที่ 8: Deploy ขึ้น Production + ตรวจสอบหลังใช้งาน",
+                    "1",
+                    "1000.00",
+                    "1000.00"
+                ],
+                [
+                    "9",
+                    "รายการที่ 9: เอกสารประกอบการใช้งาน (คู่มือย่อ)",
+                    "1",
+                    "700.00",
+                    "700.00"
+                ],
+                [
+                    "10",
+                    "รายการที่ 10: สำรองเวลาแก้ไขจุกจิก (Buffer)",
+                    "1",
+                    "500.00",
+                    "500.00"
+                ]
+            ],
+            "amount": "300.00",
+            "vat": "21.00",
+            "net_total": "321.00",
+            "baht_text": "สามร้อยยี่สิบเอ็ดบาทถ้วน",
+            "bank": "กสิกรไทย",
+            "bank_code": "123-4-56789-0",
+            "bank_name": "Goatie.ai Co., Ltd."
+        }
+        , null, 2));
 
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 

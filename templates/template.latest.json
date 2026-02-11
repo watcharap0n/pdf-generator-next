@@ -23,9 +23,9 @@
           "x": 106.83,
           "y": 26.23
         },
-        "width": 90.49,
-        "height": 5.56,
-        "content": "{comp_name}\n",
+        "width": 93.66,
+        "height": 24.08,
+        "content": "{comp_name}\n{comp_address_1}\n{comp_address_2}\n{tel}\nเลขประจำตัวผู้เสียภาษี : {comp_tax_id}",
         "name": "comp_section",
         "readOnly": false,
         "fontName": "Sarabun",
