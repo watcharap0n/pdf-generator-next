@@ -4,29 +4,29 @@
       {
         "type": "text",
         "position": {
-          "x": 106.07,
-          "y": 16.09
+          "x": 136.88,
+          "y": 24.09
         },
-        "width": 100.01,
+        "width": 69.06,
         "height": 9,
-        "content": "ใบเสนอราคา (ต้นฉบับ)",
+        "content": "ใบเสนอราคา",
         "name": "doc_title",
         "readOnly": false,
         "fontName": "Sarabun",
-        "fontSize": 22,
+        "fontSize": 23,
         "alignment": "left",
         "fontColor": "#5a9b7f"
       },
       {
         "type": "text",
         "position": {
-          "x": 106.83,
-          "y": 26.23
+          "x": 16.54,
+          "y": 29.15
         },
-        "width": 93.66,
-        "height": 24.08,
-        "content": "{comp_name}\n{comp_address_1}\n{comp_address_2}\n{tel}\nเลขประจำตัวผู้เสียภาษี : {comp_tax_id}",
-        "name": "comp_section",
+        "width": 93.93,
+        "height": 5.03,
+        "content": "{comp_name}",
+        "name": "comp_name",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
@@ -45,13 +45,13 @@
           "y": 99.08
         },
         "width": 188.91,
-        "height": 82.75200000000002,
-        "content": "[[\"1\",\"รายการที่ 1\",\"1\",\"100\",\"100\"],[\"3\",\"รายการที่ 2\",\"1\",\"100\",\"100\"],[\"4\",\"\",\"\",\"\",\"\"],[\"5\",\"\",\"\",\"\",\"\"],[\"6\",\"\",\"\",\"\",\"\"],[\"7\",\"\",\"\",\"\",\"\"],[\"8\",\"\",\"\",\"\",\"\"],[\"9\",\"\",\"\",\"\",\"\"],[\"10\",\"รายการที่ 10\",\"1\",\"100\",\"100\"]]",
+        "height": 74.57680000000002,
+        "content": "[[\"1\",\"รายการที่ 1\",\"1\",\"100\",\"100\"],[\"3\",\"รายการที่ 2\",\"1\",\"100\",\"100\"],[\"4\",\"\",\"\",\"\",\"\"],[\"5\",\"\",\"\",\"\",\"\"],[\"6\",\"\",\"\",\"\",\"\"],[\"8\",\"\",\"\",\"\",\"\"],[\"9\",\"\",\"\",\"\",\"\"],[\"10\",\"รายการที่ 10\",\"1\",\"100\",\"100\"]]",
         "showHead": true,
         "repeatHead": false,
         "head": [
           "ลำดับ",
-          "รายละเอียด",
+          "                                            รายละเอียด",
           "จำนวน",
           "ราคาต่อหน่วย",
           "ยอดรวม"
@@ -104,7 +104,7 @@
           "borderWidth": {
             "top": 0.1,
             "right": 0.8,
-            "bottom": 0.1,
+            "bottom": 5,
             "left": 0.1
           },
           "padding": {
@@ -116,7 +116,7 @@
         },
         "columnStyles": {
           "alignment": {
-            "1": "center",
+            "1": "left",
             "4": "center"
           }
         },
@@ -124,15 +124,15 @@
         "readOnly": false
       },
       {
-        "name": "logo_image",
+        "name": "comp_logo",
         "type": "image",
         "content": "data:image/png;base64,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",
         "position": {
-          "x": 11.94,
-          "y": 10.59
+          "x": 16.94,
+          "y": 8.59
         },
-        "width": 50.27,
-        "height": 47.36,
+        "width": 21.17,
+        "height": 20.11,
         "rotate": 0,
         "opacity": 1,
         "required": false,
@@ -141,35 +141,20 @@
       {
         "type": "text",
         "position": {
-          "x": 107.22,
-          "y": 58.77
+          "x": 153.35,
+          "y": 46.13
         },
-        "width": 30.16,
-        "height": 5.03,
-        "content": "รายละเอียดเอกสาร",
-        "name": "doc_detail",
-        "readOnly": false,
-        "fontName": "Sarabun",
-        "fontColor": "#5a9b7f",
-        "fontSize": 10
-      },
-      {
-        "type": "text",
-        "position": {
-          "x": 107.54,
-          "y": 63.64
-        },
-        "width": 92.87,
-        "height": 14.02,
-        "content": "เลขที่ : {doc_no}\nวันที่ : {doc_type}",
-        "name": "doc_detail_2",
+        "width": 50.54,
+        "height": 5.56,
+        "content": "{doc_no}",
+        "name": "doc_no",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
         "lineHeight": 1.3
       },
       {
-        "name": "field9",
+        "name": "line_header_separator",
         "type": "line",
         "position": {
           "x": 11.91,
@@ -187,23 +172,23 @@
       {
         "type": "text",
         "position": {
-          "x": 11.64,
-          "y": 58.51
+          "x": 16.51,
+          "y": 59.28
         },
-        "width": 30.69,
-        "height": 5.03,
+        "width": 27.23,
+        "height": 4.86,
         "content": "ลูกค้า",
-        "name": "cust_detail",
+        "name": "label_cust_section",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontColor": "#5a9b7f",
-        "fontSize": 10
+        "fontSize": 9
       },
       {
         "type": "text",
         "position": {
           "x": 13.79,
-          "y": 205.81
+          "y": 217.44
         },
         "width": 103.98,
         "height": 6.09,
@@ -216,13 +201,13 @@
       {
         "type": "text",
         "position": {
-          "x": 12.94,
-          "y": 225.06
+          "x": 16.2,
+          "y": 234.06
         },
-        "width": 43.13,
-        "height": 14.02,
-        "content": "ธนาคาร: {bank}\nเลขที่บัญชี: {bank_code}\nชื่อบัญชี: {bank_name}",
-        "name": "payment_detail",
+        "width": 12.17,
+        "height": 5.82,
+        "content": "ธนาคาร",
+        "name": "label_comp_bank_name",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 9,
@@ -231,24 +216,25 @@
       {
         "type": "text",
         "position": {
-          "x": 19.92,
+          "x": 17.89,
           "y": 279.53
         },
-        "width": 61.12,
+        "width": 31.49,
         "height": 6.61,
-        "content": "ผู้รับสินค้า/บริการ                          วันที่",
-        "name": "sign_cust",
+        "content": "ผู้รับสินค้า/บริการ",
+        "name": "label_sign_cust",
         "readOnly": false,
         "fontName": "Sarabun",
-        "fontSize": 9
+        "fontSize": 9,
+        "alignment": "center"
       },
       {
-        "name": "field7 copy",
+        "name": "stamp_image",
         "type": "image",
         "content": "data:image/png;base64,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",
         "position": {
           "x": 90.32,
-          "y": 250.78
+          "y": 253.78
         },
         "width": 28.57,
         "height": 25.66,
@@ -259,28 +245,13 @@
       {
         "type": "text",
         "position": {
-          "x": 12.52,
-          "y": 255.39
+          "x": 16.51,
+          "y": 257.78
         },
-        "width": 61.12,
+        "width": 65.09,
         "height": 6.61,
-        "content": "ในนาม {cust_name}",
-        "name": "inprint_cust",
-        "readOnly": false,
-        "fontName": "Sarabun",
-        "fontSize": 9,
-        "alignment": "center"
-      },
-      {
-        "type": "text",
-        "position": {
-          "x": 133.49,
-          "y": 254.75
-        },
-        "width": 61.12,
-        "height": 6.61,
-        "content": "ในนาม {comp_name}",
-        "name": "inprint_comp",
+        "content": "{cust_name}",
+        "name": "sign_cust_name",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 9,
@@ -290,12 +261,12 @@
         "type": "text",
         "position": {
           "x": 135.12,
-          "y": 191.14
+          "y": 196.14
         },
         "width": 23.55,
         "height": 6.61,
         "content": "รวมเป็นเงิน",
-        "name": "total_amount",
+        "name": "label_subtotal",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
@@ -306,12 +277,12 @@
         "type": "text",
         "position": {
           "x": 135.47,
-          "y": 198.61
+          "y": 203.61
         },
         "width": 23.28,
         "height": 6.61,
         "content": "ภาษีมูลค่าเพิ่ม",
-        "name": "vat",
+        "name": "label_vat_amount",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
@@ -322,12 +293,12 @@
         "type": "text",
         "position": {
           "x": 122.58,
-          "y": 205.44
+          "y": 217.44
         },
         "width": 36.25,
         "height": 6.61,
         "content": "จำนวนเงินรวมทั้งสิ้น",
-        "name": "net_amount",
+        "name": "label_total",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
@@ -338,12 +309,12 @@
         "type": "text",
         "position": {
           "x": 186.46,
-          "y": 191.09
+          "y": 196.09
         },
         "width": 8.47,
         "height": 6.61,
         "content": "บาท",
-        "name": "baht1",
+        "name": "label_baht_1",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
@@ -352,13 +323,13 @@
       {
         "type": "text",
         "position": {
-          "x": 186.44,
-          "y": 198.18
+          "x": 186.46,
+          "y": 203.18
         },
         "width": 8.47,
         "height": 6.61,
         "content": "บาท",
-        "name": "baht2",
+        "name": "label_baht_2",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
@@ -367,13 +338,13 @@
       {
         "type": "text",
         "position": {
-          "x": 186.76,
-          "y": 205.74
+          "x": 186.46,
+          "y": 217.74
         },
         "width": 8.47,
         "height": 6.61,
         "content": "บาท",
-        "name": "baht3",
+        "name": "label_baht_3",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
@@ -383,12 +354,12 @@
         "type": "text",
         "position": {
           "x": 160.73,
-          "y": 191.35
+          "y": 196.35
         },
         "width": 23.55,
         "height": 6.61,
         "content": "{amount}",
-        "name": "value_amount",
+        "name": "subtotal",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
@@ -398,12 +369,12 @@
         "type": "text",
         "position": {
           "x": 160.94,
-          "y": 198.44
+          "y": 203.44
         },
         "width": 23.55,
         "height": 6.61,
         "content": "{vat}",
-        "name": "value_vat",
+        "name": "vat_amount",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
@@ -413,23 +384,23 @@
         "type": "text",
         "position": {
           "x": 161.15,
-          "y": 205.53
+          "y": 217.53
         },
         "width": 23.55,
         "height": 6.61,
         "content": "{net_total}",
-        "name": "value_net_amount",
+        "name": "total",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
         "alignment": "right"
       },
       {
-        "name": "field9 copy",
+        "name": "line_total_separator",
         "type": "line",
         "position": {
           "x": 12.91,
-          "y": 217.25
+          "y": 226.25
         },
         "width": 184.15,
         "height": 0.23,
@@ -443,23 +414,23 @@
       {
         "type": "text",
         "position": {
-          "x": 13.14,
-          "y": 220.26
+          "x": 16.2,
+          "y": 229.26
         },
         "width": 43.39,
         "height": 4.23,
         "content": "ช่องทางการชำระเงิน",
-        "name": "payment_section",
+        "name": "label_payment_section",
         "readOnly": false,
         "fontName": "Sarabun",
-        "fontSize": 10,
+        "fontSize": 9,
         "fontColor": "#5a9b7f"
       },
       {
-        "name": "field9 copy 2",
+        "name": "line_cust_sign",
         "type": "line",
         "position": {
-          "x": 13.81,
+          "x": 16.81,
           "y": 276.99
         },
         "width": 33.07,
@@ -472,10 +443,10 @@
         "content": ""
       },
       {
-        "name": "field9 copy 3",
+        "name": "line_cust_date_sign",
         "type": "line",
         "position": {
-          "x": 53.11,
+          "x": 56.11,
           "y": 276.99
         },
         "width": 25.14,
@@ -490,42 +461,23 @@
       {
         "type": "text",
         "position": {
-          "x": 11.88,
-          "y": 64.22
+          "x": 130.9,
+          "y": 279.53
         },
-        "width": 90.49,
-        "height": 24.08,
-        "content": "{comp_name}\n{comp_address_1}\n{comp_address_2}\n{tel}\nเลขประจำตัวผู้เสียภาษี : {comp_tax_id}",
-        "name": "cust_section",
-        "readOnly": false,
-        "fontName": "Sarabun",
-        "fontSize": 10,
-        "strikethrough": false,
-        "underline": false,
-        "verticalAlignment": "middle",
-        "alignment": "left",
-        "characterSpacing": 0,
-        "lineHeight": 1.3
-      },
-      {
-        "type": "text",
-        "position": {
-          "x": 142.16,
-          "y": 278.94
-        },
-        "width": 53.18,
+        "width": 32.01,
         "height": 6.61,
-        "content": "ผู้อนุมัติ                                      วันที่",
-        "name": "sign_comp",
+        "content": "ผู้อนุมัติ                                  ",
+        "name": "label_sign_comp",
         "readOnly": false,
         "fontName": "Sarabun",
-        "fontSize": 9
+        "fontSize": 9,
+        "alignment": "center"
       },
       {
-        "name": "field9 copy 4",
+        "name": "line_comp_sign",
         "type": "line",
         "position": {
-          "x": 131.82,
+          "x": 129.82,
           "y": 276.99
         },
         "width": 33.07,
@@ -538,10 +490,10 @@
         "content": ""
       },
       {
-        "name": "field9 copy 5",
+        "name": "line_comp_date_sign",
         "type": "line",
         "position": {
-          "x": 171.12,
+          "x": 169.12,
           "y": 276.99
         },
         "width": 25.14,
@@ -562,11 +514,501 @@
         "width": 30.16,
         "height": 6.09,
         "content": "สร้างโดย Goatie.ai",
-        "name": "made_by",
+        "name": "label_made_by",
         "readOnly": false,
         "fontName": "Sarabun",
         "fontSize": 10,
         "fontColor": "#464646"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 16.55,
+          "y": 35.15
+        },
+        "width": 93.66,
+        "height": 5.03,
+        "content": "{comp_address_1}",
+        "name": "comp_address_1",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 16.55,
+          "y": 40.15
+        },
+        "width": 92.87,
+        "height": 5.03,
+        "content": "{comp_address_2}",
+        "name": "comp_address_2",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 48.97,
+          "y": 50.15
+        },
+        "width": 41.8,
+        "height": 5.03,
+        "content": "{comp_tax_id}",
+        "name": "comp_tax_id",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 16.55,
+          "y": 50.15
+        },
+        "width": 33.34,
+        "height": 5.03,
+        "content": "เลขประจำตัวผู้เสียภาษี ",
+        "name": "label_comp_tax_id",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 23.97,
+          "y": 45.15
+        },
+        "width": 43.66,
+        "height": 5.03,
+        "content": "{tel}",
+        "name": "comp_phone",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 16.55,
+          "y": 45.15
+        },
+        "width": 8.47,
+        "height": 5.03,
+        "content": "{tel}",
+        "name": "label_comp_phone",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 16.51,
+          "y": 64.83
+        },
+        "width": 83.34,
+        "height": 4.86,
+        "content": "{comp_name}",
+        "name": "cust_name",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 16.51,
+          "y": 69.83
+        },
+        "width": 83.1,
+        "height": 4.86,
+        "content": "{comp_address_1}",
+        "name": "cust_address_1",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 16.51,
+          "y": 74.83
+        },
+        "width": 82.02,
+        "height": 4.86,
+        "content": "{comp_address_2}",
+        "name": "cust_address_2",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 49.22,
+          "y": 84.83
+        },
+        "width": 49.37,
+        "height": 4.86,
+        "content": "{comp_tax_id}",
+        "name": "cust_tax_id",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 16.51,
+          "y": 84.83
+        },
+        "width": 33.45,
+        "height": 4.86,
+        "content": "เลขประจำตัวผู้เสียภาษี ",
+        "name": "label_cust_tax_id",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 24.22,
+          "y": 79.83
+        },
+        "width": 38.74,
+        "height": 4.86,
+        "content": "{tel}",
+        "name": "cust_phone",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 16.51,
+          "y": 79.83
+        },
+        "width": 8.5,
+        "height": 4.86,
+        "content": "{tel}",
+        "name": "label_cust_phone",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "strikethrough": false,
+        "underline": false,
+        "verticalAlignment": "middle",
+        "alignment": "left",
+        "characterSpacing": 0,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 153.68,
+          "y": 52.58
+        },
+        "width": 50.54,
+        "height": 5.56,
+        "content": "{doc_date}",
+        "name": "doc_date",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 10,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 32.38,
+          "y": 234.06
+        },
+        "width": 36.78,
+        "height": 5.82,
+        "content": "bank_name",
+        "name": "comp_bank_name",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 16.2,
+          "y": 239.06
+        },
+        "width": 15.61,
+        "height": 5.82,
+        "content": "เลขที่บัญชี",
+        "name": "label_comp_bank_account_no",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 32.38,
+          "y": 239.06
+        },
+        "width": 23.28,
+        "height": 5.29,
+        "content": "111-111-1111",
+        "name": "comp_bank_account_no",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 16.2,
+          "y": 244.09
+        },
+        "width": 13.76,
+        "height": 5.82,
+        "content": "ชื่อบัญชี",
+        "name": "label_comp_bank_account_name",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 32.38,
+          "y": 244.09
+        },
+        "width": 22.75,
+        "height": 5.82,
+        "content": "บจก.ตัวอย่าง",
+        "name": "comp_bank_account_name",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "lineHeight": 1.3
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 148.67,
+          "y": 33.3
+        },
+        "width": 22.22,
+        "height": 9,
+        "content": "(ต้นฉบับ)",
+        "name": "doc_title_original",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 13,
+        "alignment": "left",
+        "fontColor": "#5a9b7f"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 129.13,
+          "y": 46.31
+        },
+        "width": 20.9,
+        "height": 5.56,
+        "content": "{doc_no}",
+        "name": "label_doc_no",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 10,
+        "lineHeight": 1.3,
+        "fontColor": "#5a9b7f"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 129.25,
+          "y": 52.58
+        },
+        "width": 19.84,
+        "height": 5.56,
+        "content": "{doc_date}",
+        "name": "label_doc_date",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 10,
+        "lineHeight": 1.3,
+        "fontColor": "#5a9b7f"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 130.49,
+          "y": 257.75
+        },
+        "width": 65.09,
+        "height": 6.61,
+        "content": "{comp_name}",
+        "name": "sign_comp_name",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "alignment": "center"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 56.72,
+          "y": 279.53
+        },
+        "width": 24.61,
+        "height": 6.61,
+        "content": "วันที่",
+        "name": "label_sign_cust_date",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "alignment": "center"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 170.17,
+          "y": 279.52
+        },
+        "width": 25.66,
+        "height": 6.61,
+        "content": "วันที่",
+        "name": "label_sign_comp_date",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 9,
+        "alignment": "center"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 134.68,
+          "y": 210.96
+        },
+        "width": 24.08,
+        "height": 6.61,
+        "content": "ภาษีหัก ณ ที่จ่าย",
+        "name": "label_withholding",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 10,
+        "alignment": "right",
+        "fontColor": "#5a9b7f"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 160.94,
+          "y": 210.53
+        },
+        "width": 23.55,
+        "height": 6.61,
+        "content": "{wht}",
+        "name": "withholding_amount",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 10,
+        "alignment": "right"
+      },
+      {
+        "type": "text",
+        "position": {
+          "x": 186.46,
+          "y": 210.81
+        },
+        "width": 8.47,
+        "height": 6.61,
+        "content": "บาท",
+        "name": "label_baht_4",
+        "readOnly": false,
+        "fontName": "Sarabun",
+        "fontSize": 10,
+        "alignment": "right",
+        "rotate": 0
       }
     ]
   ],
