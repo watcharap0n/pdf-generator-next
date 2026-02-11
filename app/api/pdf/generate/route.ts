@@ -13,7 +13,9 @@ export async function POST(req: NextRequest) {
 
         try {
             const body = await req.json();
-            if (body && body.inputs) inputs = body.inputs;
+            if (body && body.inputs) {
+                inputs = Array.isArray(body.inputs) ? body.inputs : [body.inputs];
+            }
             if (body && body.template) template = body.template;
         } catch (e) {
             // No body or invalid JSON
