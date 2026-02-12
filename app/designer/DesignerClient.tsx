@@ -24,93 +24,102 @@ export default function DesignerClient({
     const [status, setStatus] = useState<string>("");
     const [inputData, setInputData] = useState<string>(JSON.stringify(
         {
-            "doc_title": "ใบเสนอราคาต้นฉบับ",
-            "doc_type": "QT-2026-0001",
-            "comp_name": "Goatie.ai Co., Ltd.",
-            "comp_address_1": "99/9 ถนนสุขุมวิท แขวงคลองตันเหนือ",
-            "comp_address_2": "เขตวัฒนา กรุงเทพมหานคร 10110",
-            "tel": "โทร: 02-000-0000",
-            "comp_tax_id": "0105566123456",
-            "cust_name": "บริษัท ลูกค้าทดสอบ จำกัด",
+            "doc_title": "ใบเสนอราคา",
+            "comp_name": "บริษัท โกทีเอไอ เทคโนโลยี จำกัด",
+
             "table_item": [
-                [
-                    "1",
-                    "รายการที่ 1: ค่าพัฒนา Bulk Transfer (Split 1.9%)",
-                    "1",
-                    "4000.00",
-                    "4000.00"
-                ],
-                [
-                    "2",
-                    "รายการที่ 2: ค่าติดตั้ง/ตั้งค่าเริ่มต้นระบบ",
-                    "1",
-                    "1500.00",
-                    "1500.00"
-                ],
-                [
-                    "3",
-                    "รายการที่ 3: ปรับปรุงหน้า Admin (UI/UX + Validation)",
-                    "1",
-                    "1200.00",
-                    "1200.00"
-                ],
-                [
-                    "4",
-                    "รายการที่ 4: เพิ่ม API Endpoint สำหรับ Bulk Transfer",
-                    "1",
-                    "1800.00",
-                    "1800.00"
-                ],
-                [
-                    "5",
-                    "รายการที่ 5: เพิ่ม Log/Audit Trail การโอนเงิน",
-                    "1",
-                    "900.00",
-                    "900.00"
-                ],
-                [
-                    "6",
-                    "รายการที่ 6: เพิ่ม Report สรุปรายการโอน (Export ได้)",
-                    "1",
-                    "1100.00",
-                    "1100.00"
-                ],
-                [
-                    "7",
-                    "รายการที่ 7: ทดสอบระบบ (Unit/Integration) + UAT Support",
-                    "1",
-                    "1300.00",
-                    "1300.00"
-                ],
-                [
-                    "8",
-                    "รายการที่ 8: Deploy ขึ้น Production + ตรวจสอบหลังใช้งาน",
-                    "1",
-                    "1000.00",
-                    "1000.00"
-                ],
-                [
-                    "9",
-                    "รายการที่ 9: เอกสารประกอบการใช้งาน (คู่มือย่อ)",
-                    "1",
-                    "700.00",
-                    "700.00"
-                ],
-                [
-                    "10",
-                    "รายการที่ 10: สำรองเวลาแก้ไขจุกจิก (Buffer)",
-                    "1",
-                    "500.00",
-                    "500.00"
-                ]
+                ["1", "พัฒนา Backend API (FastAPI + AWS)", "1", "50,000.00", "50,000.00"],
+                ["2", "พัฒนา Frontend Dashboard (Next.js)", "1", "35,000.00", "35,000.00"],
+                ["3", "เชื่อมต่อ LINE Profile + ระบบอัปโหลดรูป", "1", "20,000.00", "20,000.00"],
+                ["4", "Deploy ขึ้น AWS (EC2 + S3 + CloudFront)", "1", "18,000.00", "18,000.00"],
+                ["5", "ปรับปรุงประสิทธิภาพและ Security Hardening", "1", "12,000.00", "12,000.00"],
+                ["6", "จัดทำเอกสารระบบและคู่มือการใช้งาน", "1", "8,000.00", "8,000.00"],
+                ["7", "ฝึกอบรมทีมงาน 1 วัน", "1", "5,000.00", "5,000.00"],
+                ["8", "ค่าบำรุงรักษาระบบ 1 เดือน", "1", "2,000.00", "2,000.00"]
             ],
-            "amount": "300.00",
-            "vat": "21.00",
-            "net_total": "321.00",
-            "baht_text": "สามร้อยยี่สิบเอ็ดบาทถ้วน",
-            "bank": "กสิกรไทย",
-            "bank_code": "123-4-56789-0",
-            "bank_name": "Goatie.ai Co., Ltd."
+
+            "comp_logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAF/gL+ZxL5WQAAAABJRU5ErkJggg==",
+
+            "doc_no": "QUT-2026-0021",
+            "line_header_separator": "rendered_header_line",
+
+            "label_cust_section": "ลูกค้า",
+            "baht_text": "(หนึ่งแสนหกหมื่นห้าร้อยบาทถ้วน)",
+
+            "label_comp_bank_name": "ธนาคาร",
+            "label_sign_cust": "ผู้รับสินค้า/บริการ",
+
+            "stamp_image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwAE5QL+ZxL5WQAAAABJRU5ErkJggg==",
+
+            "sign_cust_name": "นายสมชาย ใจดี",
+
+            "label_subtotal": "รวมเป็นเงิน",
+            "label_vat_amount": "ภาษีมูลค่าเพิ่ม",
+            "label_total": "จำนวนเงินรวมทั้งสิ้น",
+
+            "label_baht_1": "บาท",
+            "label_baht_2": "บาท",
+            "label_baht_3": "บาท",
+
+            "subtotal": "150,000.00",
+            "vat_amount": "10,500.00",
+            "total": "160,500.00",
+
+            "line_total_separator": "rendered_total_line",
+            "label_payment_section": "ช่องทางการชำระเงิน",
+
+            "line_cust_sign": "signature_line_customer",
+            "line_cust_date_sign": "date_line_customer",
+
+            "label_sign_comp": "ผู้อนุมัติ",
+
+            "line_comp_sign": "signature_line_company",
+            "line_comp_date_sign": "date_line_company",
+
+            "label_made_by": "สร้างโดย Goatie.ai",
+
+            "comp_address_1": "99/1 ถนนสุขุมวิท",
+            "comp_address_2": "แขวงคลองตัน เขตวัฒนา กรุงเทพฯ 10110",
+
+            "comp_tax_id": "0-1055-59876-54-3",
+            "label_comp_tax_id": "เลขประจำตัวผู้เสียภาษี",
+
+            "comp_phone": "02-888-9999",
+            "label_comp_phone": "โทร",
+
+            "cust_name": "บริษัท ไทยดิจิทัล โซลูชั่น จำกัด",
+            "cust_address_1": "88/8 ถนนรัชดาภิเษก",
+            "cust_address_2": "แขวงดินแดง เขตดินแดง กรุงเทพฯ 10400",
+
+            "cust_tax_id": "0-1055-61234-56-7",
+            "label_cust_tax_id": "เลขประจำตัวผู้เสียภาษี",
+
+            "cust_phone": "081-234-5678",
+            "label_cust_phone": "โทร",
+
+            "doc_date": "11 กุมภาพันธ์ 2569",
+
+            "comp_bank_name": "ธนาคารกสิกรไทย",
+            "label_comp_bank_account_no": "เลขที่บัญชี",
+            "comp_bank_account_no": "123-4-56789-0",
+
+            "label_comp_bank_account_name": "ชื่อบัญชี",
+            "comp_bank_account_name": "บริษัท โกทีเอไอ เทคโนโลยี จำกัด",
+
+            "doc_title_original": "(ต้นฉบับ)",
+
+            "label_doc_no": "เลขที่เอกสาร",
+            "label_doc_date": "วันที่",
+
+            "sign_comp_name": "นายวชรพล วีระบริรักษ์",
+
+            "label_sign_cust_date": "วันที่",
+            "label_sign_comp_date": "วันที่",
+
+            "label_withholding": "ภาษีหัก ณ ที่จ่าย",
+            "withholding_amount": "(4,500.00)",
+
+            "label_baht_4": "บาท"
         }
         , null, 2));
 
